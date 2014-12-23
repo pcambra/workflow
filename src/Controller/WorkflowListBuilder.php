@@ -14,8 +14,7 @@ use Drupal\Component\Utility\String;
 /**
  * Provides a listing of workflows.
  */
-class WorkflowListBuilder extends ConfigEntityListBuilder
-{
+class WorkflowListBuilder extends ConfigEntityListBuilder {
 
   /**
    * {@inheritdoc}

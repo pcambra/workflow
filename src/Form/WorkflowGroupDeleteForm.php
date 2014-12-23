@@ -14,8 +14,7 @@ use Drupal\Core\Url;
 /**
  * Builds the form to delete a WorkflowGroup.
  */
-class WorkflowGroupDeleteForm extends EntityConfirmFormBase
-{
+class WorkflowGroupDeleteForm extends EntityConfirmFormBase {
 
   /**
    * {@inheritdoc}

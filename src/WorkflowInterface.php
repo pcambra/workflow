@@ -13,8 +13,7 @@ use \Drupal\Core\Config\Entity\ThirdPartySettingsInterface;
 /**
  * Provides an interface defining a workflow entity.
  */
-interface WorkflowInterface extends ConfigEntityInterface, ThirdPartySettingsInterface
-{
+interface WorkflowInterface extends ConfigEntityInterface, ThirdPartySettingsInterface {
 
   /**
    * Returns the workflow group.

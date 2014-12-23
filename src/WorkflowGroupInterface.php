@@ -12,8 +12,7 @@ use Drupal\Core\Config\Entity\ConfigEntityInterface;
 /**
  * Provides an interface defining a workflow group entity.
  */
-interface WorkflowGroupInterface extends ConfigEntityInterface
-{
+interface WorkflowGroupInterface extends ConfigEntityInterface {
 
   /**
    * Returns the group description.

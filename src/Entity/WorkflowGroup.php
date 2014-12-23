@@ -37,8 +37,7 @@ use Drupal\workflow\WorkflowGroupInterface;
  *   }
  * )
  */
-class WorkflowGroup extends ConfigEntityBase implements WorkflowGroupInterface
-{
+class WorkflowGroup extends ConfigEntityBase implements WorkflowGroupInterface {
 
   /**
    * The group id.

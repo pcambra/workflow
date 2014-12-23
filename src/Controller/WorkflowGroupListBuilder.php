@@ -13,8 +13,7 @@ use Drupal\Core\Entity\EntityInterface;
 /**
  * Provides a listing of workflow groups.
  */
-class WorkflowGroupListBuilder extends ConfigEntityListBuilder
-{
+class WorkflowGroupListBuilder extends ConfigEntityListBuilder {
 
   /**
    * {@inheritdoc}

@@ -12,8 +12,7 @@ use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\workflow\Entity\WorkflowGroup;
 
-class WorkflowForm extends EntityForm
-{
+class WorkflowForm extends EntityForm {
 
   /**
    * {@inheritdoc}

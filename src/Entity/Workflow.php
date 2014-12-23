@@ -38,8 +38,7 @@ use Drupal\workflow\WorkflowInterface;
  *   }
  * )
  */
-class Workflow extends ConfigEntityBase implements WorkflowInterface
-{
+class Workflow extends ConfigEntityBase implements WorkflowInterface {
 
   use ThirdPartySettingsTrait;
 
