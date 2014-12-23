@@ -8,6 +8,7 @@
 namespace Drupal\workflow\Entity;
 
 use Drupal\Core\Config\Entity\ConfigEntityBase;
+use Drupal\Core\Config\Entity\ThirdPartySettingsTrait;
 use Drupal\workflow\WorkflowInterface;
 
 /**
@@ -39,6 +40,8 @@ use Drupal\workflow\WorkflowInterface;
  */
 class Workflow extends ConfigEntityBase implements WorkflowInterface
 {
+
+  use ThirdPartySettingsTrait;
 
   /**
    * The workflow id.

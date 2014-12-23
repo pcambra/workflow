@@ -23,3 +23,8 @@ workflow.workflow.*:
           label:
             type: label
             label: 'Label'
+    third_party_settings:
+      type: sequence
+      label: 'Third party settings'
+      sequence:
+        - type: workflow.third_party.[%key]

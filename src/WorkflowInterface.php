@@ -8,11 +8,12 @@
 namespace Drupal\workflow;
 
 use Drupal\Core\Config\Entity\ConfigEntityInterface;
+use \Drupal\Core\Config\Entity\ThirdPartySettingsInterface;
 
 /**
  * Provides an interface defining a workflow entity.
  */
-interface WorkflowInterface extends ConfigEntityInterface
+interface WorkflowInterface extends ConfigEntityInterface, ThirdPartySettingsInterface
 {
 
   /**
