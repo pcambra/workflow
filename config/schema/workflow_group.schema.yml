@@ -1,0 +1,15 @@
+workflow.workflow_group.*:
+  type: config_entity
+  label: 'Workflow group config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    uuid:
+      type: string
+    label:
+      type: label
+      label: 'Label'
+    description:
+      type: text
+      label: 'Description'

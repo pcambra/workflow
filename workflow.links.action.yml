@@ -1,0 +1,12 @@
+entity.workflow.add_form:
+  route_name: 'entity.workflow.add_form'
+  title: 'Add workflow'
+  appears_on:
+    - entity.workflow.list
+
+entity.workflow_group.add_form:
+  route_name: 'entity.workflow_group.add_form'
+  title: 'Add workflow group'
+  appears_on:
+    - entity.workflow_group.list
+

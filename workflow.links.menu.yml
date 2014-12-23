@@ -1,0 +1,5 @@
+entity.workflow.list:
+  title: 'Workflow'
+  description: 'Manage custom workflows'
+  route_name: entity.workflow.list
+  parent: system.admin_config_system

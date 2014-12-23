@@ -1,0 +1,64 @@
+# Workflow routing definition
+entity.workflow.list:
+  path: '/admin/config/system/workflow'
+  defaults:
+    _entity_list: 'workflow'
+    _title: 'Workflows'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.workflow.add_form:
+  path: '/admin/config/system/workflow/add'
+  defaults:
+    _entity_form: 'workflow.add'
+    _title: 'Add workflow'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.workflow.edit_form:
+  path: '/admin/config/system/workflow/{workflow}'
+  defaults:
+    _entity_form: 'workflow.edit'
+    _title: 'Edit workflow'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.workflow.delete_form:
+  path: '/admin/config/system/workflow/{workflow}/delete'
+  defaults:
+    _entity_form: 'workflow.delete'
+    _title: 'Delete workflow'
+  requirements:
+    _permission: 'administer site configuration'
+# WorkflowGroup routing definition
+entity.workflow_group.list:
+  path: '/admin/config/system/workflow_group'
+  defaults:
+    _entity_list: 'workflow_group'
+    _title: 'Workflow groups'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.workflow_group.add_form:
+  path: '/admin/config/system/workflow_group/add'
+  defaults:
+    _entity_form: 'workflow_group.add'
+    _title: 'Add group'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.workflow_group.edit_form:
+  path: '/admin/config/system/workflow_group/{workflow_group}'
+  defaults:
+    _entity_form: 'workflow_group.edit'
+    _title: 'Edit group'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.workflow_group.delete_form:
+  path: '/admin/config/system/workflow_group/{workflow_group}/delete'
+  defaults:
+    _entity_form: 'workflow_group.delete'
+    _title: 'Delete Group'
+  requirements:
+    _permission: 'administer site configuration'

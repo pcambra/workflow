@@ -1,0 +1,25 @@
+workflow.workflow.*:
+  type: config_entity
+  label: 'Workflow config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    uuid:
+      type: string
+    label:
+      type: label
+      label: 'Label'
+    group:
+      type: string
+      label: 'Group'
+    states:
+      type: sequence
+      sequence:
+        mapping:
+          id:
+            type: string
+            label: 'ID'
+          label:
+            type: label
+            label: 'Label'

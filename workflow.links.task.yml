@@ -1,0 +1,9 @@
+entity.workflow.list:
+  route_name: entity.workflow.list
+  base_route: entity.workflow.list
+  title: 'Workflows'
+
+entity.workflow_group.list:
+  route_name: entity.workflow_group.list
+  base_route: entity.workflow.list
+  title: 'Groups'
