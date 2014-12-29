@@ -16,6 +16,14 @@ use \Drupal\Core\Config\Entity\ThirdPartySettingsInterface;
 interface WorkflowInterface extends ConfigEntityInterface, ThirdPartySettingsInterface {
 
   /**
+   * Returns the workflow group entity.
+   *
+   * @return \Drupal\workflow\WorkflowGroupInterface
+   *   The workflow group entity.
+   */
+  public function getGroupEntity();
+
+  /**
    * Returns the workflow group.
    *
    * @return string
@@ -24,11 +32,13 @@ interface WorkflowInterface extends ConfigEntityInterface, ThirdPartySettingsInt
   public function getGroup();
 
   /**
-   * Returns the workflow group entity.
+   * Sets the workflow group.
    *
-   * @return \Drupal\workflow\WorkflowGroupInterface
-   *   The workflow group entity.
+   * @param string $group
+   *   The group.
+   *
+   * @return $this
    */
-  public function getGroupEntity();
+  public function setGroup($group);
 
 }

@@ -66,6 +66,13 @@ class Workflow extends ConfigEntityBase implements WorkflowInterface {
   /**
    * {@inheritdoc}
    */
+  public function getGroupEntity() {
+    return WorkflowGroup::load($this->group);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function getGroup() {
     return $this->group;
   }
@@ -73,8 +80,9 @@ class Workflow extends ConfigEntityBase implements WorkflowInterface {
   /**
    * {@inheritdoc}
    */
-  public function getGroupEntity() {
-    return WorkflowGroup::load($this->group);
+  public function setGroup($group) {
+    $this->group = $group;
+    return $this;
   }
 
 }
