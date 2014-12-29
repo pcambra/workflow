@@ -41,4 +41,22 @@ interface WorkflowInterface extends ConfigEntityInterface, ThirdPartySettingsInt
    */
   public function setGroup($group);
 
+  /**
+   * Returns the workflow states.
+   *
+   * @return array
+   *   The states.
+   */
+  public function getStates();
+
+  /**
+   * Sets the workflow states.
+   *
+   * @param string $states
+   *   The states.
+   *
+   * @return $this
+   */
+  public function setStates(array $states);
+
 }

@@ -64,6 +64,13 @@ class Workflow extends ConfigEntityBase implements WorkflowInterface {
   protected $group;
 
   /**
+   * The workflow states.
+   *
+   * @var array
+   */
+  protected $states = array();
+
+  /**
    * {@inheritdoc}
    */
   public function getGroupEntity() {
@@ -82,6 +89,21 @@ class Workflow extends ConfigEntityBase implements WorkflowInterface {
    */
   public function setGroup($group) {
     $this->group = $group;
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getStates() {
+    return $this->states;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setStates(array $states) {
+    $this->states = $states;
     return $this;
   }
 

@@ -23,6 +23,9 @@ workflow.workflow.*:
           label:
             type: label
             label: 'Label'
+          weight:
+            type: integer
+            label: 'Weight'
     third_party_settings:
       type: sequence
       label: 'Third party settings'
