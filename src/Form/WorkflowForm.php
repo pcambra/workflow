@@ -7,7 +7,7 @@
 
 namespace Drupal\workflow\Form;
 
-use Drupal\Core\Entity\EntityInterface;
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\workflow\Entity\WorkflowGroup;
@@ -21,6 +21,11 @@ class WorkflowForm extends EntityForm {
     $form = parent::form($form, $form_state);
 
     $workflow = $this->entity;
+
+    // Make sure we've got a consistent id for edit/add operations.
+    $form_id = Html::getUniqueId('workflow_manage_form');
+    $form['#id'] = $form_id;
+
     $form['label'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Label'),
@@ -100,10 +105,11 @@ class WorkflowForm extends EntityForm {
         '#submit' => array('::removeStateSubmit'),
         '#ajax' => array(
           'callback' => '::refreshForm',
-          'wrapper' => 'workflow-edit-form',
+          'wrapper' => $form_id,
         ),
       );
     }
+
     $form['add_another_state'] = array(
       '#type' => 'submit',
       '#value' => t('Add another state'),
@@ -111,7 +117,7 @@ class WorkflowForm extends EntityForm {
       '#submit' => array('::addAnotherStateSubmit'),
       '#ajax' => array(
         'callback' => '::refreshForm',
-        'wrapper' => 'workflow-edit-form',
+        'wrapper' => $form_id,
       ),
     );
 
@@ -153,8 +159,6 @@ class WorkflowForm extends EntityForm {
    * Submission handler for the "Add another state" button.
    */
   public static function addAnotherStateSubmit(array $form, FormStateInterface $form_state) {
-    $triggering_element = $form_state->getTriggeringElement();
-
     $states = $form_state->getValue('states');
     $states[] = array('id' => '', 'label' => '', 'weight' => 0);
     $form_state->setValue('states', $states);
@@ -165,7 +169,7 @@ class WorkflowForm extends EntityForm {
   /**
    * Ajax handler.
    */
-  public function refreshForm($form, FormStateInterface $form_state) {
+  public function refreshForm(array $form, FormStateInterface $form_state) {
     return $form;
   }
 
@@ -202,4 +206,5 @@ class WorkflowForm extends EntityForm {
     }
     $form_state->setRedirect('entity.workflow.list');
   }
+
 }

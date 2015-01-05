@@ -7,7 +7,6 @@
 
 namespace Drupal\workflow\Form;
 
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -63,4 +62,5 @@ class WorkflowGroupForm extends EntityForm {
     }
     $form_state->setRedirect('entity.workflow_group.list');
   }
+
 }
